@@ -1,0 +1,113 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.background_color{
+    background-color: #F5F5F5;
+}
+.red_bar{
+    height: 50px;
+    width: 5px;
+    background-color: #E24852;
+}
+.label_text{
+    width: 165px;
+    margin-left: 20px;
+    padding-top: 12px;
+}
+.right_image{
+    margin-top: -198px;
+}
+/* Custom input field */
+.custom_input_field{
+    border-radius: 0 !important;
+}
+.custom_input_field:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid #E24852;
+}
+/* CheckBox Input */
+.checkBoxInput{
+    height: 20px;
+    width: 20px;
+}
+
+/* Custom Slider */
+#ex1Slider .slider-selection {
+	background: #E24852;
+}
+#ex2Slider .slider-selection {
+	background: #E24852;
+}
+#ex3Slider .slider-selection {
+	background: #E24852;
+}
+#ex1Slider .slider-handle {
+    background: #E24852;
+    border: 5px solid #ffff;
+}
+#ex2Slider .slider-handle {
+    background: #E24852;
+    border: 5px solid #ffff;
+}
+#ex3Slider .slider-handle {
+    background: #E24852;
+    border: 5px solid #ffff;
+}
+.slider.slider-horizontal{
+    width: 100px !important;
+}
+.rangeInputField{
+    width: 55px;
+}
+.bs-tooltip-top .arrow::before{
+    border-top-color: #E24852 !important;
+}
+.tooltip-inner{
+    background-color: #ffff;
+    border: 2px solid #E24852 !important;
+    color: black;
+}
+.tooltip-inner font font::after{
+    color: black;
+}
+.tooltip-inner font font{
+    color: black;
+}
+.submit_button{
+    border-radius: 30px;
+    color: #ffff;
+}
+/* Right side text box */
+.text_block{
+    border-bottom: 2px solid  #E24852 ;
+    padding: 15px;
+    box-shadow: 2px 2px 2px rgb(241, 214, 214);
+}
+.textBoxHeading{
+    margin: 0 auto;
+    border-bottom: 2px solid black;
+    width: 200px;
+    margin-bottom: 50px;
+}
+@media only screen and (max-width: 1168px) {
+    .label_text{
+        width: 145px;
+    }    
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .label_text{
+        width: 100px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .right_image{
+        margin-top: 20px;
+    }    
+}
+@media only screen and (max-width: 576px) {
+    .margin_top{
+        margin-top: 30px;
+    }    
+}
