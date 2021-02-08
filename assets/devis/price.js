@@ -1096,17 +1096,18 @@
         options[i].addEventListener('click', () => {
             let currentOption = currentCategory.getOption(i);
             currentOption.select();
-            runUserInfo();
+            runXOpts(); 
         });
     }
     //userInfo listeners
     userInfoNext.addEventListener('click', () => {
-        runXOpts()
+        showDecisionPage();
+        //questionnaireInit();
+        //questionnaireService(currentSurvice);
     });
     //xOpts listeners
     xOptsNext.addEventListener('click', () => {
-        questionnaireInit();
-        questionnaireService(currentSurvice);
+        runUserInfo();
     });
     for(let i = 0; i < xOptSelections.length; i++){
         let currentXOptSelectEle = xOptSelections[i];
