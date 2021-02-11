@@ -1610,7 +1610,7 @@ function addReliventHTMLSectionOptions(){
         populateReciptXOptContainers();
 
         var reciptTitle = getReciptServiceTitle();
-        for(let i = 0; i < reciptServiceContainers.length; i++) {
+        /*for(let i = 0; i < reciptServiceContainers.length; i++) {
             var currentSurvace = currentCategory.getAllServices()[i];
             var max = currentCategory.getAllServices().length;
             var container = reciptServiceContainers[i];
@@ -1628,7 +1628,7 @@ function addReliventHTMLSectionOptions(){
                 descriptionEle.innerText = currentSurvace.getDescription();
                 inputEle.value = currentSurvace.getQuantity();
             }
-        };
+        };*/
         reciptServiceTitle.innerText = reciptTitle;
     }
     function hideAllReciptXOpts(){
@@ -1729,7 +1729,7 @@ function addReliventHTMLSectionOptions(){
         }
         emailBody += '</div>'
         //#endregion
-        emailBody +=   '<div style="width: 100%;">' +
+        /*emailBody +=   '<div style="width: 100%;">' +
             '    <div style="display: block;">' + 
             '        <div style="display: flex; width: 100%; box-sizing: border-box; background-color: #DD5962; color: white; padding-top: 0.5rem; padding-bottom: 0.5rem; padding-left: 0.5rem;">' + 
             '            <div style="width: 30%;">' + 
@@ -1751,7 +1751,7 @@ function addReliventHTMLSectionOptions(){
             serviceRow = construceEmailServiceRow(service, i);
             emailBody += serviceRow;
         });
-        emailBody += '</div>'
+        emailBody += '</div>'*/
 
         emailBody += constructEmailTotal();
         
