@@ -1004,6 +1004,8 @@
     //#region userInfo elements
         let userInfoContainer = document.getElementById('pTool-userInfo-container');
         let userInfoNext = document.getElementById('pTool-userInfo-next');
+        let userInfoErrorMessage = document.querySelector('#pTool-userInfo-container .pTool-userInfo-error');
+        let userInfoInputs = document.querySelectorAll('#pTool-userInfo-container .pTool-userInfo-input');
     //#endregion
 
     //#region extraOp elements
@@ -1101,7 +1103,7 @@
     }
     //userInfo listeners
     userInfoNext.addEventListener('click', () => {
-        showDecisionPage();
+        runUserInfoNext();
         //questionnaireInit();
         //questionnaireService(currentSurvice);
     });
@@ -1146,6 +1148,7 @@
         backButtons[i].addEventListener('click', returnToMain);
     }
 //#endregion
+//
 //#region Category button functionality
 
         function updateServiceContainers(servaceCategory){
@@ -1174,6 +1177,7 @@
                     allServiceContainers[i].classList.add('display-none');
                 }
             }
+            hideEle(userInfoErrorMessage);
         }
         function showService(n){
             if(allServiceContainers[n].classList.contains('display-none')){
@@ -1885,6 +1889,36 @@ function addReliventHTMLSectionOptions(){
 //#region User Info
     function runUserInfo(){
         navigateTo(userInfoContainer);
+    }
+    function runUserInfoNext(){
+        if(hasValidUserInfoInputs()){
+            showDecisionPage();
+        }
+        else{
+            showUserInfoErrorMessage();
+        }
+    }
+    function hasValidUserInfoInputs(){
+        let inputValue;
+        let flufflessValue;
+        for(let i = 0; i < userInfoInputs.length; i++){
+            inputValue = userInfoInputs[i].value;
+            flufflessValue = getRemovedFluffOf(inputValue);
+            if(flufflessValue === ''){
+                return false;
+            }
+        }
+        return true;
+    }
+    function showUserInfoErrorMessage(){
+        showEle(userInfoErrorMessage);
+    }
+    function getRemovedFluffOf(fluffvalue){
+        let fullLess = fluffvalue;
+        while(fullLess.indexOf(' ') >= 0){
+            fullLess = fullLess.replace(' ', '');
+        }
+        return fullLess;
     }
 //#endregion
 
